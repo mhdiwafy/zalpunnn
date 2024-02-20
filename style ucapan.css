@@ -1,0 +1,179 @@
+/* Set the colour and the position of the background and the elements */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f3dbd8;
+}
+
+.container {
+  position: relative;
+}
+.movement {
+  position: relative;
+  top: 50px;
+  cursor: pointer;
+  animation: up 3s linear infinite;
+}
+
+/* Style the envelope and the card */
+.foto{
+  position: absolute;
+  border-radius: 4px;
+  width: 16px;
+  height: 35px;
+  top: 600px;
+  left: 150px;
+  max-width: 25%;
+  max-height: 25%;
+  z-index:1
+  
+
+ }
+
+.envelope {
+  position: relative;
+  width: 333px;
+  height: 250px;
+  background-color: #c06f6f;
+  
+}
+
+.envelope:before {
+  background-color: #f08080;
+  content: "";
+  position: absolute;
+  width: 237px;
+  height: 237px;
+  transform: rotate(45deg);
+  top: -117px;
+  left: 48px;
+  border-radius: 30px 0 0 0;
+  
+}
+
+
+
+.cardtitle {
+  position: absolute;
+  background-color: #eae2b7;
+  width: 130px;
+  height: 30px;
+  top: -60px;
+  left: 100px;
+  border-radius: 8px 8px 8px 8px;
+  box-shadow: -5px -5px 30px rgba(0, 0, 0, 0.3);
+}
+
+.cardblur {
+  position: absolute;
+  background-color: #eae2b7;
+  opacity:1 ;
+  width: 300px;
+  height: 210px;
+  top: 40px;
+  left: 15px;
+  box-shadow: -5px -5px 15px rgba(0, 0, 0, 0.4);
+  border-radius: 10px 10px 10px 10px;
+  filter: blur(15px);
+  z-index: 2
+}
+
+.card {
+  position: absolute;
+  background-color: #eae2b7;
+  width: 300px;
+  height: 210px;
+  top: 40px;
+  left: 15px;
+  box-shadow: -5px -5px 15px rgba(0, 0, 0, 0.4);
+  border-radius: 10px 10px 10px 10px;
+
+}
+
+.card:before {
+  content: "";
+  position: absolute;
+  border: 3px solid #003049;
+  border-style: dotted;
+  width: 276px;
+  height: 185px;
+  left: 10px;
+  top: 10px;
+  border-radius: 4px 4px 4px 4px;
+}
+
+.texttitle {
+  position: absolute;
+  font-family:'Brush Script MT',cursive ;
+  font-size: 35px;
+  text-align: center;
+  line-height: 0;
+  top: -47px;
+  left: 102px;
+  color: #782962;
+}
+
+.text {
+  position: absolute;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 11px;
+  text-align: justify;
+  line-height: 10px;
+  top: 12px;
+  left: 15px;
+  right: 13px;
+}
+
+
+.front {
+  position: absolute;
+  border-right: 225px solid #f4978e;
+  border-top: 150px solid transparent;
+  border-bottom: 100px solid transparent;
+  left: 109px;
+  top: 0;
+  width: 0;
+  height: 0;
+  z-index: 10;
+}
+
+.front:before {
+  position: absolute;
+  content: "";
+  border-left: 335px solid #f8ad9d;
+  border-top: 250px solid transparent;
+  left: -110px;
+  top: -149px;
+  width: 0;
+  height: 0;
+  z-index: 10
+}
+
+/* Add the shadow */
+.shadow {
+  position :absolute
+}
+
+/* To move the envelope up and down */
+@keyframes up {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-30px);
+  }
+}
+
+/* to scale the shadow */
+@keyframes scale {
+  0%,
+  100% {
+    transform: scaleX(1);
+  }
+  25% {
+    transform: scaleX(0.85);
+  }
+}
